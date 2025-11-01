@@ -53,3 +53,6 @@
 - [ ] Add domain renewal functionality
 - [ ] Add marketplace listing/buying features
 
+
+- [ ] Update navigation logo with new Digital Pulse branding image
+

@@ -22,8 +22,7 @@ export default function Home() {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <img src="/pulse-logo.png" alt="Pulse Logo" className="h-10 w-auto" />
-              <span className="text-2xl font-bold text-gradient">PULSE</span>
+              <img src="/digital-pulse-logo.jpg" alt="Digital Pulse Logo" className="h-12 w-auto" />
             </div>
             <div className="hidden md:flex items-center gap-8">
               <a href="#features" className="text-foreground/80 hover:text-primary transition-colors">Features</a>
