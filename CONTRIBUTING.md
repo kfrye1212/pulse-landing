@@ -107,10 +107,11 @@ pulse-landing/
 
 ## Database Changes
 
-If you make changes to the database schema:
+If you make changes to the database schema in `drizzle/schema.ts`, you need to generate and apply migrations:
 ```bash
 pnpm db:push
 ```
+This command generates migration files and applies the schema changes to your database.
 
 ## Need Help?
 
