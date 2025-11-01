@@ -33,7 +33,7 @@ All protected branches require:
 If you discover a security vulnerability in this repository, please report it privately:
 
 1. **Do not** open a public issue
-2. Email the repository owner directly at: [Add your email here]
+2. Use GitHub's private security advisory feature, or contact the repository owner
 3. Include:
    - Description of the vulnerability
    - Steps to reproduce

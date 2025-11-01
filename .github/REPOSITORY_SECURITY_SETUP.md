@@ -101,7 +101,7 @@ Navigate to: `Settings > Collaborators and teams`
 - Recommended roles:
   - Admin: Full access (owner only)
   - Write: Can push to non-protected branches, open PRs
-  - Read: Can view and clone repository
+  - Read: Can view and clone repository.
 
 **Best practice:** Limit admin access to repository owner only.
 
