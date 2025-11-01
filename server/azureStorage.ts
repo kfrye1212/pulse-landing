@@ -17,6 +17,12 @@ function getAzureStorageConfig(): AzureStorageConfig {
     );
   }
 
+  if (!containerName) {
+    throw new Error(
+      "Azure Storage container name missing: set AZURE_STORAGE_CONTAINER_NAME"
+    );
+  }
+
   return { connectionString, containerName };
 }
 
@@ -97,9 +103,11 @@ export async function azureStorageGet(
 }
 
 /**
- * Get a signed URL for reading a blob (with read access)
+ * Get the URL for a blob
+ * Note: This returns the direct blob URL. For secure access with expiration,
+ * consider implementing SAS (Shared Access Signature) URL generation.
  * @param relKey - Relative path/key for the blob
- * @returns Object with key and signed URL
+ * @returns Object with key and blob URL
  */
 export async function azureStorageGetUrl(
   relKey: string
@@ -124,7 +132,8 @@ export async function azureStorageDelete(
   const key = normalizeKey(relKey);
   const blobClient = await getBlobClient(key);
 
-  await blobClient.delete();
+  // Delete the blob and any snapshots
+  await blobClient.delete({ deleteSnapshots: "include" });
 
   return {
     key,
