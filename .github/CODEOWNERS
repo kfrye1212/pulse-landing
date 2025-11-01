@@ -1,0 +1,31 @@
+# CODEOWNERS file for pulse-landing repository
+# This file controls who can approve pull requests and changes to the repository.
+# 
+# Lines starting with '#' are comments.
+# Each line is a file pattern followed by one or more owners.
+# The last matching pattern has the most precedence.
+#
+# Repository owners have full access to approve all changes.
+# Replace @kfrye1212 with the actual GitHub username if different.
+
+# Global ownership - all files require approval from repository owner
+* @kfrye1212
+
+# Critical configuration files require explicit approval
+/.github/* @kfrye1212
+/package.json @kfrye1212
+/pnpm-lock.yaml @kfrye1212
+/tsconfig.json @kfrye1212
+/.env.example @kfrye1212
+/drizzle.config.ts @kfrye1212
+
+# Server-side code requires approval
+/server/* @kfrye1212
+
+# Database migrations and schemas require approval
+/drizzle/* @kfrye1212
+/shared/db/* @kfrye1212
+
+# Security and configuration files
+/SECURITY.md @kfrye1212
+/.gitignore @kfrye1212
