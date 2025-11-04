@@ -53,7 +53,7 @@ Pulse Landing is a decentralized finance (DeFi) platform built on blockchain tec
 
 Before you begin, ensure you have the following installed:
 - **Node.js**: v18.x or higher
-- **pnpm**: v10.x or higher (recommended package manager)
+- **pnpm**: v10.4.1 or higher (recommended package manager)
 - **MySQL**: v8.x or higher (for database)
 
 ## 🚀 Getting Started
@@ -78,12 +78,12 @@ Before you begin, ensure you have the following installed:
    cp .env.example .env
    ```
 
-   Update the `.env` file with your configuration:
+   Update the `.env` file with your configuration (customize the example values for your setup):
    ```env
    # Application
    VITE_APP_ID=proj_abc123def456
-   VITE_APP_TITLE="Pulse Landing"
-   VITE_APP_LOGO="https://placehold.co/40x40/3b82f6/ffffff?text=P"
+   VITE_APP_TITLE="Pulse Landing"  # Change from "Todo App" in example
+   VITE_APP_LOGO="https://placehold.co/40x40/3b82f6/ffffff?text=P"  # Customize your logo
    
    # OAuth & Authentication
    VITE_OAUTH_PORTAL_URL=https://vida.butterfly-effect.dev
