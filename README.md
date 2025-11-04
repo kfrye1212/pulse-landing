@@ -45,7 +45,7 @@ Pulse Landing is a decentralized finance (DeFi) platform built on blockchain tec
 
 ### Development Tools
 - **Package Manager**: pnpm
-- **Type Checking**: TypeScript 5.9
+- **Type Checking**: TypeScript 5.9.3
 - **Code Quality**: Prettier
 - **Testing**: Vitest
 
@@ -78,12 +78,12 @@ Before you begin, ensure you have the following installed:
    cp .env.example .env
    ```
 
-   Update the `.env` file with your configuration. Note: The example file contains placeholder values from a template - update these for the Pulse project:
+   Update the `.env` file with your configuration. The example file contains template values - customize them for the Pulse project:
    ```env
    # Application
    VITE_APP_ID=proj_abc123def456
-   VITE_APP_TITLE="Pulse Landing"  # Update from default template
-   VITE_APP_LOGO="https://placehold.co/40x40/3b82f6/ffffff?text=P"  # Update with your logo URL
+   VITE_APP_TITLE="Pulse Landing"  # Replace default template title
+   VITE_APP_LOGO="/digital-pulse-logo.jpg"  # Use your actual logo path
    
    # OAuth & Authentication
    VITE_OAUTH_PORTAL_URL=https://vida.butterfly-effect.dev
@@ -91,7 +91,7 @@ Before you begin, ensure you have the following installed:
    JWT_SECRET=your-jwt-secret-change-in-production
    
    # Database
-   DATABASE_URL=mysql://user:password@localhost:3306/pulse_db
+   DATABASE_URL=mysql://user:password@localhost:3306/main
    
    # OpenAI (Optional)
    OPENAI_API_URL=
@@ -217,7 +217,7 @@ pulse-landing/
 ### Customization
 
 - **Branding**: Update logo and colors in `client/src/index.css`
-- **Theme**: Tailwind configuration in `tailwind.config.js`
+- **Theme**: Tailwind CSS configured via Vite plugin (`@tailwindcss/vite`) and `client/src/index.css`
 - **Fonts**: Custom fonts (Orbitron + Inter) configured in CSS
 
 ## 🧪 Testing
