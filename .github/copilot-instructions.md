@@ -12,7 +12,7 @@ This is a landing page for Pulse, a blockchain domain registration platform supp
 - **Database**: MySQL with Drizzle ORM
 - **Web3**: wagmi (Ethereum), Solana Wallet Adapter
 - **Testing**: Vitest
-- **Package Manager**: pnpm (v10.4.1)
+- **Package Manager**: pnpm (v10.x, pinned via packageManager field)
 
 ## Build & Development
 
