@@ -78,12 +78,12 @@ Before you begin, ensure you have the following installed:
    cp .env.example .env
    ```
 
-   Update the `.env` file with your configuration (customize the example values for your setup):
+   Update the `.env` file with your configuration. Note: The example file contains placeholder values from a template - update these for the Pulse project:
    ```env
    # Application
    VITE_APP_ID=proj_abc123def456
-   VITE_APP_TITLE="Pulse Landing"  # Change from "Todo App" in example
-   VITE_APP_LOGO="https://placehold.co/40x40/3b82f6/ffffff?text=P"  # Customize your logo
+   VITE_APP_TITLE="Pulse Landing"  # Update from default template
+   VITE_APP_LOGO="https://placehold.co/40x40/3b82f6/ffffff?text=P"  # Update with your logo URL
    
    # OAuth & Authentication
    VITE_OAUTH_PORTAL_URL=https://vida.butterfly-effect.dev
@@ -205,7 +205,7 @@ pulse-landing/
 ### Wallet Integration
 
 **Ethereum (via Wagmi)**:
-- Configured in `client/src/hooks/useWallet.tsx`
+- Configured in `client/src/hooks/useWallet.ts`
 - Supports multiple wallet providers through Web3Modal
 - Add your WalletConnect Project ID for production
 
