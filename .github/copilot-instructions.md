@@ -12,7 +12,7 @@ This is a landing page for Pulse, a blockchain domain registration platform supp
 - **Database**: MySQL with Drizzle ORM
 - **Web3**: wagmi (Ethereum), Solana Wallet Adapter
 - **Testing**: Vitest
-- **Package Manager**: pnpm (v10.x, pinned via packageManager field)
+- **Package Manager**: pnpm (version pinned via packageManager field in package.json)
 
 ## Build & Development
 
@@ -74,7 +74,8 @@ pnpm run format
 ## Testing Guidelines
 
 - Test files should be placed alongside the code they test with `.test.ts` or `.spec.ts` extension
-- Tests are configured to run from `server/**/*.test.ts` and `server/**/*.spec.ts`
+- Tests are currently configured to run from `server/**/*.test.ts` and `server/**/*.spec.ts`
+- Client-side testing infrastructure is not yet set up
 - Use Vitest for all tests
 - Always run tests before submitting changes
 
