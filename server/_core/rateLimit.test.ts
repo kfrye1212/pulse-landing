@@ -1,9 +1,5 @@
 import { describe, it, expect } from "vitest";
-import {
-  apiRateLimiter,
-  oauthRateLimiter,
-  publicRateLimiter,
-} from "./rateLimit";
+import { apiRateLimiter, oauthRateLimiter } from "./rateLimit";
 
 describe("Rate Limiters", () => {
   describe("oauthRateLimiter", () => {
@@ -17,13 +13,6 @@ describe("Rate Limiters", () => {
     it("should be defined and be a function", () => {
       expect(apiRateLimiter).toBeDefined();
       expect(typeof apiRateLimiter).toBe("function");
-    });
-  });
-
-  describe("publicRateLimiter", () => {
-    it("should be defined and be a function", () => {
-      expect(publicRateLimiter).toBeDefined();
-      expect(typeof publicRateLimiter).toBe("function");
     });
   });
 });

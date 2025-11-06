@@ -1,8 +1,5 @@
 import rateLimit from "express-rate-limit";
 
-// Paths exempt from rate limiting
-const HEALTH_CHECK_PATH = "/api/trpc/system.health";
-
 /**
  * Rate limiter for OAuth callback endpoint
  * More restrictive to prevent brute force attacks
@@ -25,20 +22,4 @@ export const apiRateLimiter = rateLimit({
   message: "Too many requests from this IP, please try again later.",
   standardHeaders: true, // Return rate limit info in the `RateLimit-*` headers
   legacyHeaders: false, // Disable the `X-RateLimit-*` headers
-});
-
-/**
- * Rate limiter for public endpoints (like health checks)
- * Very lenient to allow monitoring and basic functionality
- */
-export const publicRateLimiter = rateLimit({
-  windowMs: 1 * 60 * 1000, // 1 minute
-  max: 60, // Limit each IP to 60 requests per minute
-  message: "Too many requests from this IP, please try again later.",
-  standardHeaders: true, // Return rate limit info in the `RateLimit-*` headers
-  legacyHeaders: false, // Disable the `X-RateLimit-*` headers
-  skip: req => {
-    // Skip rate limiting for health check endpoints in production monitoring
-    return req.path === HEALTH_CHECK_PATH;
-  },
 });
