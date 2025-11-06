@@ -36,6 +36,6 @@ export const publicRateLimiter = rateLimit({
   legacyHeaders: false, // Disable the `X-RateLimit-*` headers
   skip: req => {
     // Skip rate limiting for health check endpoints in production monitoring
-    return req.path.includes("/api/trpc/system.health");
+    return req.path === "/api/trpc/system.health";
   },
 });
