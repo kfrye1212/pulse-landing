@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "wouter";
+import Navigation from "@/components/Navigation";
 import { 
   ArrowLeft, 
   FileText,
@@ -13,25 +14,7 @@ import {
 export default function Docs() {
   return (
     <div className="min-h-screen bg-background">
-      {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <Link href="/">
-              <div className="flex items-center gap-3 cursor-pointer">
-                <img src="/pulse-logo.png" alt="Pulse Logo" className="h-10 w-auto" />
-                <span className="text-2xl font-bold text-gradient">PULSE</span>
-              </div>
-            </Link>
-            <Link href="/">
-              <Button variant="ghost">
-                <ArrowLeft className="mr-2 h-4 w-4" />
-                Back to Home
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </nav>
+      <Navigation variant="back" />
 
       <div className="pt-32 pb-20">
         <div className="container max-w-5xl">
