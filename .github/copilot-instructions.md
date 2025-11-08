@@ -11,7 +11,7 @@ This is a landing page for Pulse, a blockchain domain registration platform supp
 - **Backend**: Express.js, tRPC
 - **Database**: MySQL with Drizzle ORM
 - **Web3**: wagmi (Ethereum), Solana Wallet Adapter
-- **Testing**: Vitest
+- **Testing**: Vitest (server-side only; client-side testing not yet configured)
 - **Package Manager**: pnpm (version pinned via packageManager field in package.json)
 
 ## Build & Development
