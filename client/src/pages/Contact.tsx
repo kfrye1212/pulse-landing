@@ -1,5 +1,11 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Link } from "wouter";
 import { ArrowLeft, Mail, MessageSquare, Twitter } from "lucide-react";
 
@@ -12,7 +18,11 @@ export default function Contact() {
           <div className="flex items-center justify-between">
             <Link href="/">
               <div className="flex items-center gap-3 cursor-pointer">
-                <img src="/pulse-logo.png" alt="Pulse Logo" className="h-10 w-auto" />
+                <img
+                  src="/pulse-logo.png"
+                  alt="Pulse Logo"
+                  className="h-10 w-auto"
+                />
                 <span className="text-2xl font-bold text-gradient">PULSE</span>
               </div>
             </Link>
@@ -50,7 +60,11 @@ export default function Contact() {
               </CardHeader>
               <CardContent>
                 <Button variant="outline" className="w-full" asChild>
-                  <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                  <a
+                    href="https://twitter.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     Follow @PulseChain
                   </a>
                 </Button>
@@ -67,7 +81,11 @@ export default function Contact() {
               </CardHeader>
               <CardContent>
                 <Button variant="outline" className="w-full" asChild>
-                  <a href="https://discord.com" target="_blank" rel="noopener noreferrer">
+                  <a
+                    href="https://discord.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     Join Discord
                   </a>
                 </Button>
@@ -84,7 +102,11 @@ export default function Contact() {
               </CardHeader>
               <CardContent>
                 <Button variant="outline" className="w-full" asChild>
-                  <a href="https://telegram.org" target="_blank" rel="noopener noreferrer">
+                  <a
+                    href="https://telegram.org"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     Join Telegram
                   </a>
                 </Button>
@@ -102,7 +124,13 @@ export default function Contact() {
             </CardHeader>
             <CardContent>
               <p className="text-foreground/80 mb-4">
-                Email us at: <a href="mailto:contact@pulse.network" className="text-primary hover:underline">contact@pulse.network</a>
+                Email us at:{" "}
+                <a
+                  href="mailto:contact@pulse.network"
+                  className="text-primary hover:underline"
+                >
+                  contact@pulse.network
+                </a>
               </p>
               <p className="text-foreground/70 text-sm">
                 We typically respond within 24-48 hours
@@ -114,4 +142,3 @@ export default function Contact() {
     </div>
   );
 }
-
