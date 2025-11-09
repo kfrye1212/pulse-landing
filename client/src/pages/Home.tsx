@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "wouter";
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 import { 
   Wallet, 
   Shield, 
@@ -17,30 +19,7 @@ import {
 export default function Home() {
   return (
     <div className="min-h-screen">
-      {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <img src="/digital-pulse-logo.jpg" alt="Digital Pulse Logo" className="h-12 w-auto" />
-            </div>
-            <div className="hidden md:flex items-center gap-8">
-              <a href="#features" className="text-foreground/80 hover:text-primary transition-colors">Features</a>
-              <a href="#tokenomics" className="text-foreground/80 hover:text-primary transition-colors">Tokenomics</a>
-              <a href="#roadmap" className="text-foreground/80 hover:text-primary transition-colors">Roadmap</a>
-              <Link href="/about" className="text-foreground/80 hover:text-primary transition-colors">About</Link>
-              <Link href="/docs" className="text-foreground/80 hover:text-primary transition-colors">Docs</Link>
-            </div>
-            <div className="flex items-center gap-4">
-              <Link href="/presale">
-                <Button className="bg-gradient-pulse hover:opacity-90 glow-pulse">
-                  Join Presale
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <Navigation variant="home" />
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
@@ -397,52 +376,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-card border-t border-border py-12">
-        <div className="container">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div>
-              <div className="flex items-center gap-3 mb-4">
-                <img src="/pulse-logo.png" alt="Pulse Logo" className="h-8 w-auto" />
-                <span className="text-xl font-bold text-gradient">PULSE</span>
-              </div>
-              <p className="text-foreground/70">
-                The next generation Web3 blockchain ecosystem
-              </p>
-            </div>
-            <div>
-              <h3 className="font-bold mb-4">Platform</h3>
-              <ul className="space-y-2 text-foreground/70">
-                <li><Link href="/presale" className="hover:text-primary transition-colors">Presale</Link></li>
-                <li><Link href="/about" className="hover:text-primary transition-colors">About</Link></li>
-                <li><a href="#features" className="hover:text-primary transition-colors">Features</a></li>
-                <li><a href="#tokenomics" className="hover:text-primary transition-colors">Tokenomics</a></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-bold mb-4">Resources</h3>
-              <ul className="space-y-2 text-foreground/70">
-                <li><Link href="/docs" className="hover:text-primary transition-colors">Documentation</Link></li>
-                <li><Link href="/docs" className="hover:text-primary transition-colors">Whitepaper</Link></li>
-                <li><Link href="/docs" className="hover:text-primary transition-colors">Security</Link></li>
-                <li><a href="#roadmap" className="hover:text-primary transition-colors">Roadmap</a></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-bold mb-4">Community</h3>
-              <ul className="space-y-2 text-foreground/70">
-                <li><a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Twitter</a></li>
-                <li><a href="https://discord.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Discord</a></li>
-                <li><a href="https://telegram.org" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Telegram</a></li>
-                <li><Link href="/contact" className="hover:text-primary transition-colors">Contact</Link></li>
-              </ul>
-            </div>
-          </div>
-          <div className="mt-12 pt-8 border-t border-border text-center text-foreground/70">
-            <p>&copy; 2025 Pulse. All rights reserved. Built on blockchain technology.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
