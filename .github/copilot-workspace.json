@@ -1,0 +1,45 @@
+{
+  "version": "1.0",
+  "instructions": [
+    {
+      "file": ".github/copilot-instructions.md",
+      "description": "Main instructions for working with the Pulse Landing repository"
+    }
+  ],
+  "context": {
+    "primaryLanguages": ["TypeScript", "React"],
+    "frameworks": ["React", "Express", "tRPC", "Vite"],
+    "styling": ["Tailwind CSS", "Radix UI"],
+    "web3": ["Solana", "Ethereum", "Wagmi"],
+    "database": ["MySQL", "Drizzle ORM"],
+    "packageManager": "pnpm"
+  },
+  "codePatterns": {
+    "react": {
+      "preferFunctionalComponents": true,
+      "preferNamedExports": true,
+      "useTypeScript": true
+    },
+    "styling": {
+      "useTailwind": true,
+      "theme": "dark",
+      "brandColors": ["cyan", "magenta"]
+    },
+    "api": {
+      "preferTRPC": true,
+      "validateWithZod": true,
+      "useTypeInference": true
+    }
+  },
+  "quality": {
+    "typeCheck": "pnpm check",
+    "format": "pnpm format",
+    "test": "pnpm test",
+    "build": "pnpm build"
+  },
+  "references": {
+    "tasks": "todo.md",
+    "readme": "README.md",
+    "contributing": "CONTRIBUTING.md"
+  }
+}
