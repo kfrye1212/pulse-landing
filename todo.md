@@ -1,6 +1,7 @@
 # Pulse Landing - TODO
 
 ## Completed Features
+
 - [x] Initial project setup with Next.js + Tailwind
 - [x] Neon cyan-magenta gradient branding
 - [x] Custom fonts (Orbitron + Inter)
@@ -21,6 +22,7 @@
 - [x] Generated branding assets (robot, logo, graphics)
 
 ## Pending Tasks
+
 - [x] Update roadmap dates from 2025 to 2026 (Q1-Q4)
 - [ ] Create domain registration webpage with Solana wallet integration
 - [ ] Deploy Solana TLD contract to devnet
@@ -34,6 +36,7 @@
 - [ ] Add WalletConnect Project ID for production
 
 ## Future Enhancements
+
 - [ ] Add domain search functionality
 - [ ] Implement smart contract calls for domain registration
 - [ ] Add domain management features
@@ -42,9 +45,8 @@
 - [ ] SEO optimization
 - [ ] Social media integration
 
-
-
 ## Current Tasks (In Progress)
+
 - [ ] Fix setTimeout error in Solana TLD test file
 - [ ] Build TLD domain registration website
 - [ ] Integrate TLD contract (Program ID: AYM5JaJ7L4E3Uycb4dwf416aMMYtjg4jYLXe8veq3ypy)
@@ -53,6 +55,4 @@
 - [ ] Add domain renewal functionality
 - [ ] Add marketplace listing/buying features
 
-
 - [ ] Update navigation logo with new Digital Pulse branding image
-

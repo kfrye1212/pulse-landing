@@ -1,5 +1,5 @@
-import { useAccount, useConnect, useDisconnect, useBalance } from 'wagmi';
-import { useWeb3Modal } from '@web3modal/wagmi/react';
+import { useAccount, useConnect, useDisconnect, useBalance } from "wagmi";
+import { useWeb3Modal } from "@web3modal/wagmi/react";
 
 export function useWallet() {
   const { address, isConnected, chain } = useAccount();
@@ -22,4 +22,3 @@ export function useWallet() {
     disconnect,
   };
 }
-
