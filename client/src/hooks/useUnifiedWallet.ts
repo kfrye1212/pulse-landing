@@ -1,18 +1,19 @@
-import { useWallet as useSolanaWallet } from '@solana/wallet-adapter-react';
-import { useAccount, useConnect, useDisconnect, useBalance } from 'wagmi';
-import { useWeb3Modal } from '@web3modal/wagmi/react';
-import { useState } from 'react';
+import { useWallet as useSolanaWallet } from "@solana/wallet-adapter-react";
+import { useAccount, useConnect, useDisconnect, useBalance } from "wagmi";
+import { useWeb3Modal } from "@web3modal/wagmi/react";
+import { useState } from "react";
 
-export type WalletType = 'ethereum' | 'solana';
+export type WalletType = "ethereum" | "solana";
 
 export function useUnifiedWallet() {
-  const [selectedWalletType, setSelectedWalletType] = useState<WalletType>('ethereum');
+  const [selectedWalletType, setSelectedWalletType] =
+    useState<WalletType>("ethereum");
 
   // Ethereum wallet hooks
-  const { 
-    address: ethAddress, 
-    isConnected: ethIsConnected, 
-    chain 
+  const {
+    address: ethAddress,
+    isConnected: ethIsConnected,
+    chain,
   } = useAccount();
   const { disconnect: ethDisconnect } = useDisconnect();
   const { open: openEthModal } = useWeb3Modal();
@@ -28,20 +29,20 @@ export function useUnifiedWallet() {
   } = useSolanaWallet();
 
   const connectEthereum = async () => {
-    setSelectedWalletType('ethereum');
+    setSelectedWalletType("ethereum");
     await openEthModal();
   };
 
   const connectSolana = async () => {
-    setSelectedWalletType('solana');
+    setSelectedWalletType("solana");
     // Solana wallet connection is handled by WalletModalProvider
     // User needs to click the Solana wallet button in UI
   };
 
   const disconnect = () => {
-    if (selectedWalletType === 'ethereum' && ethIsConnected) {
+    if (selectedWalletType === "ethereum" && ethIsConnected) {
       ethDisconnect();
-    } else if (selectedWalletType === 'solana' && solConnected) {
+    } else if (selectedWalletType === "solana" && solConnected) {
       solDisconnect();
     }
   };
@@ -50,7 +51,7 @@ export function useUnifiedWallet() {
     // Wallet type
     selectedWalletType,
     setSelectedWalletType,
-    
+
     // Ethereum
     ethereum: {
       address: ethAddress,
@@ -60,7 +61,7 @@ export function useUnifiedWallet() {
       connect: connectEthereum,
       disconnect: ethDisconnect,
     },
-    
+
     // Solana
     solana: {
       address: solPublicKey?.toBase58(),
@@ -70,11 +71,12 @@ export function useUnifiedWallet() {
       disconnect: solDisconnect,
       select: solSelect,
     },
-    
+
     // Unified interface
-    isConnected: selectedWalletType === 'ethereum' ? ethIsConnected : solConnected,
-    address: selectedWalletType === 'ethereum' ? ethAddress : solPublicKey?.toBase58(),
+    isConnected:
+      selectedWalletType === "ethereum" ? ethIsConnected : solConnected,
+    address:
+      selectedWalletType === "ethereum" ? ethAddress : solPublicKey?.toBase58(),
     disconnect,
   };
 }
-

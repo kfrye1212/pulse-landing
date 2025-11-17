@@ -1,15 +1,18 @@
 import { trpc } from "@/lib/trpc";
-import { UNAUTHED_ERR_MSG } from '@shared/const';
+import { UNAUTHED_ERR_MSG } from "@shared/const";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { httpBatchLink, TRPCClientError } from "@trpc/client";
 import { createRoot } from "react-dom/client";
 import superjson from "superjson";
-import { WagmiProvider } from 'wagmi';
-import { ConnectionProvider, WalletProvider } from '@solana/wallet-adapter-react';
-import { WalletModalProvider } from '@solana/wallet-adapter-react-ui';
-import { config } from './lib/web3';
-import { useSolanaWallets } from './lib/solana';
-import '@solana/wallet-adapter-react-ui/styles.css';
+import { WagmiProvider } from "wagmi";
+import {
+  ConnectionProvider,
+  WalletProvider,
+} from "@solana/wallet-adapter-react";
+import { WalletModalProvider } from "@solana/wallet-adapter-react-ui";
+import { config } from "./lib/web3";
+import { useSolanaWallets } from "./lib/solana";
+import "@solana/wallet-adapter-react-ui/styles.css";
 import App from "./App";
 import { getLoginUrl } from "./const";
 import "./index.css";

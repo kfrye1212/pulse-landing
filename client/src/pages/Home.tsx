@@ -1,17 +1,23 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Link } from "wouter";
-import { 
-  Wallet, 
-  Shield, 
-  Zap, 
-  Users, 
-  TrendingUp, 
+import {
+  Wallet,
+  Shield,
+  Zap,
+  Users,
+  TrendingUp,
   Lock,
   Rocket,
   Globe,
   Code,
-  ArrowRight
+  ArrowRight,
 } from "lucide-react";
 
 export default function Home() {
@@ -22,14 +28,43 @@ export default function Home() {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <img src="/digital-pulse-logo.jpg" alt="Digital Pulse Logo" className="h-12 w-auto" />
+              <img
+                src="/digital-pulse-logo.jpg"
+                alt="Digital Pulse Logo"
+                className="h-12 w-auto"
+              />
             </div>
             <div className="hidden md:flex items-center gap-8">
-              <a href="#features" className="text-foreground/80 hover:text-primary transition-colors">Features</a>
-              <a href="#tokenomics" className="text-foreground/80 hover:text-primary transition-colors">Tokenomics</a>
-              <a href="#roadmap" className="text-foreground/80 hover:text-primary transition-colors">Roadmap</a>
-              <Link href="/about" className="text-foreground/80 hover:text-primary transition-colors">About</Link>
-              <Link href="/docs" className="text-foreground/80 hover:text-primary transition-colors">Docs</Link>
+              <a
+                href="#features"
+                className="text-foreground/80 hover:text-primary transition-colors"
+              >
+                Features
+              </a>
+              <a
+                href="#tokenomics"
+                className="text-foreground/80 hover:text-primary transition-colors"
+              >
+                Tokenomics
+              </a>
+              <a
+                href="#roadmap"
+                className="text-foreground/80 hover:text-primary transition-colors"
+              >
+                Roadmap
+              </a>
+              <Link
+                href="/about"
+                className="text-foreground/80 hover:text-primary transition-colors"
+              >
+                About
+              </Link>
+              <Link
+                href="/docs"
+                className="text-foreground/80 hover:text-primary transition-colors"
+              >
+                Docs
+              </Link>
             </div>
             <div className="flex items-center gap-4">
               <Link href="/presale">
@@ -44,41 +79,50 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
-        <div 
+        <div
           className="absolute inset-0 opacity-30"
           style={{
-            backgroundImage: 'url(/hero-background.png)',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
+            backgroundImage: "url(/hero-background.png)",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
           }}
         />
         <div className="container relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-5xl md:text-7xl font-bold mb-6">
-                The Future of <span className="text-gradient">Web3</span> is Here
+                The Future of <span className="text-gradient">Web3</span> is
+                Here
               </h1>
               <p className="text-xl text-foreground/80 mb-8">
-                Pulse is the next-generation blockchain ecosystem powering decentralized finance, 
-                social platforms, and digital innovation. Join the revolution.
+                Pulse is the next-generation blockchain ecosystem powering
+                decentralized finance, social platforms, and digital innovation.
+                Join the revolution.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link href="/presale">
-                  <Button size="lg" className="bg-gradient-pulse hover:opacity-90 glow-cyan">
+                  <Button
+                    size="lg"
+                    className="bg-gradient-pulse hover:opacity-90 glow-cyan"
+                  >
                     Join Presale <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                 </Link>
                 <Link href="/docs">
-                  <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/10">
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="border-primary text-primary hover:bg-primary/10"
+                  >
                     Read Whitepaper
                   </Button>
                 </Link>
               </div>
             </div>
             <div className="flex justify-center">
-              <img 
-                src="/robot-mascot-new.jpg" 
-                alt="Pulse Robot Mascot" 
+              <img
+                src="/robot-mascot-new.jpg"
+                alt="Pulse Robot Mascot"
                 className="w-full max-w-md animate-float"
               />
             </div>
@@ -94,8 +138,8 @@ export default function Home() {
               Built for the <span className="text-gradient">Future</span>
             </h2>
             <p className="text-xl text-foreground/70 max-w-2xl mx-auto">
-              Pulse combines cutting-edge blockchain technology with user-friendly design 
-              to create the ultimate Web3 ecosystem.
+              Pulse combines cutting-edge blockchain technology with
+              user-friendly design to create the ultimate Web3 ecosystem.
             </p>
           </div>
 
@@ -105,7 +149,8 @@ export default function Home() {
                 <Wallet className="h-12 w-12 text-primary mb-4" />
                 <CardTitle>Pulse Wallet</CardTitle>
                 <CardDescription>
-                  Secure, non-custodial wallet supporting multiple chains and tokens
+                  Secure, non-custodial wallet supporting multiple chains and
+                  tokens
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -115,7 +160,8 @@ export default function Home() {
                 <Shield className="h-12 w-12 text-secondary mb-4" />
                 <CardTitle>Bank-Grade Security</CardTitle>
                 <CardDescription>
-                  Military-grade encryption and multi-signature protection for your assets
+                  Military-grade encryption and multi-signature protection for
+                  your assets
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -125,7 +171,8 @@ export default function Home() {
                 <Zap className="h-12 w-12 text-accent mb-4" />
                 <CardTitle>Lightning Fast</CardTitle>
                 <CardDescription>
-                  Sub-second transactions with minimal fees on our optimized network
+                  Sub-second transactions with minimal fees on our optimized
+                  network
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -135,7 +182,8 @@ export default function Home() {
                 <Users className="h-12 w-12 text-primary mb-4" />
                 <CardTitle>Social Integration</CardTitle>
                 <CardDescription>
-                  Connect with the community on Pulse Social - own your data, earn rewards
+                  Connect with the community on Pulse Social - own your data,
+                  earn rewards
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -145,7 +193,8 @@ export default function Home() {
                 <TrendingUp className="h-12 w-12 text-secondary mb-4" />
                 <CardTitle>DeFi Ecosystem</CardTitle>
                 <CardDescription>
-                  Stake, lend, and trade with our integrated decentralized exchange
+                  Stake, lend, and trade with our integrated decentralized
+                  exchange
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -171,7 +220,8 @@ export default function Home() {
               <span className="text-gradient">Tokenomics</span>
             </h2>
             <p className="text-xl text-foreground/70 max-w-2xl mx-auto">
-              Fair distribution designed for long-term sustainability and community growth
+              Fair distribution designed for long-term sustainability and
+              community growth
             </p>
           </div>
 
@@ -181,7 +231,9 @@ export default function Home() {
                 <CardTitle className="text-2xl">Total Supply</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-4xl font-bold text-gradient mb-2">1,000,000,000</p>
+                <p className="text-4xl font-bold text-gradient mb-2">
+                  1,000,000,000
+                </p>
                 <p className="text-foreground/70">PULSE tokens</p>
               </CardContent>
             </Card>
@@ -223,9 +275,22 @@ export default function Home() {
                 <CardTitle className="text-2xl">Vesting Schedule</CardTitle>
               </CardHeader>
               <CardContent className="text-left space-y-2">
-                <p className="flex justify-between"><span>TGE (Token Generation Event):</span> <span className="text-primary font-bold">20%</span></p>
-                <p className="flex justify-between"><span>Month 1-6:</span> <span className="text-secondary font-bold">80% linear unlock</span></p>
-                <p className="flex justify-between"><span>Anti-sniping:</span> <span className="text-accent font-bold">Commit-reveal mechanism</span></p>
+                <p className="flex justify-between">
+                  <span>TGE (Token Generation Event):</span>{" "}
+                  <span className="text-primary font-bold">20%</span>
+                </p>
+                <p className="flex justify-between">
+                  <span>Month 1-6:</span>{" "}
+                  <span className="text-secondary font-bold">
+                    80% linear unlock
+                  </span>
+                </p>
+                <p className="flex justify-between">
+                  <span>Anti-sniping:</span>{" "}
+                  <span className="text-accent font-bold">
+                    Commit-reveal mechanism
+                  </span>
+                </p>
               </CardContent>
             </Card>
           </div>
@@ -242,11 +307,15 @@ export default function Home() {
             Don't Miss the Presale
           </h2>
           <p className="text-xl text-background/90 mb-8 max-w-2xl mx-auto">
-            Join early adopters and secure your PULSE tokens at the best price. 
+            Join early adopters and secure your PULSE tokens at the best price.
             Limited slots available with exclusive bonuses.
           </p>
           <Link href="/presale">
-            <Button size="lg" variant="secondary" className="bg-background text-primary hover:bg-background/90 text-lg px-8 py-6">
+            <Button
+              size="lg"
+              variant="secondary"
+              className="bg-background text-primary hover:bg-background/90 text-lg px-8 py-6"
+            >
               <Rocket className="mr-2 h-6 w-6" />
               Join Presale Now
             </Button>
@@ -270,9 +339,13 @@ export default function Home() {
             <Card className="border-primary/50 bg-primary/5">
               <CardHeader>
                 <div className="flex items-center gap-4">
-                  <div className="h-12 w-12 rounded-full bg-primary flex items-center justify-center text-background font-bold">Q1</div>
+                  <div className="h-12 w-12 rounded-full bg-primary flex items-center justify-center text-background font-bold">
+                    Q1
+                  </div>
                   <div>
-                    <CardTitle className="text-2xl">Foundation & Launch</CardTitle>
+                    <CardTitle className="text-2xl">
+                      Foundation & Launch
+                    </CardTitle>
                     <CardDescription>2026</CardDescription>
                   </div>
                 </div>
@@ -290,9 +363,13 @@ export default function Home() {
             <Card className="border-secondary/50 bg-secondary/5">
               <CardHeader>
                 <div className="flex items-center gap-4">
-                  <div className="h-12 w-12 rounded-full bg-secondary flex items-center justify-center text-background font-bold">Q2</div>
+                  <div className="h-12 w-12 rounded-full bg-secondary flex items-center justify-center text-background font-bold">
+                    Q2
+                  </div>
                   <div>
-                    <CardTitle className="text-2xl">Ecosystem Expansion</CardTitle>
+                    <CardTitle className="text-2xl">
+                      Ecosystem Expansion
+                    </CardTitle>
                     <CardDescription>2026</CardDescription>
                   </div>
                 </div>
@@ -310,9 +387,13 @@ export default function Home() {
             <Card className="border-accent/50 bg-accent/5">
               <CardHeader>
                 <div className="flex items-center gap-4">
-                  <div className="h-12 w-12 rounded-full bg-accent flex items-center justify-center text-background font-bold">Q3</div>
+                  <div className="h-12 w-12 rounded-full bg-accent flex items-center justify-center text-background font-bold">
+                    Q3
+                  </div>
                   <div>
-                    <CardTitle className="text-2xl">DeFi & Governance</CardTitle>
+                    <CardTitle className="text-2xl">
+                      DeFi & Governance
+                    </CardTitle>
                     <CardDescription>2026</CardDescription>
                   </div>
                 </div>
@@ -330,7 +411,9 @@ export default function Home() {
             <Card className="border-primary/50 bg-primary/5">
               <CardHeader>
                 <div className="flex items-center gap-4">
-                  <div className="h-12 w-12 rounded-full bg-primary flex items-center justify-center text-background font-bold">Q4</div>
+                  <div className="h-12 w-12 rounded-full bg-primary flex items-center justify-center text-background font-bold">
+                    Q4
+                  </div>
                   <div>
                     <CardTitle className="text-2xl">Global Adoption</CardTitle>
                     <CardDescription>2026</CardDescription>
@@ -359,10 +442,11 @@ export default function Home() {
               Our <span className="text-gradient">Mission</span>
             </h2>
             <p className="text-xl text-foreground/80 leading-relaxed mb-8">
-              Pulse is building a decentralized ecosystem where users truly own their data, 
-              control their finances, and participate in a fair digital economy. We believe 
-              in transparency, community governance, and the power of blockchain technology 
-              to create a more equitable future for everyone.
+              Pulse is building a decentralized ecosystem where users truly own
+              their data, control their finances, and participate in a fair
+              digital economy. We believe in transparency, community governance,
+              and the power of blockchain technology to create a more equitable
+              future for everyone.
             </p>
             <div className="grid md:grid-cols-3 gap-6 mt-12">
               <Card className="border-primary/30">
@@ -403,7 +487,11 @@ export default function Home() {
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <img src="/pulse-logo.png" alt="Pulse Logo" className="h-8 w-auto" />
+                <img
+                  src="/pulse-logo.png"
+                  alt="Pulse Logo"
+                  className="h-8 w-auto"
+                />
                 <span className="text-xl font-bold text-gradient">PULSE</span>
               </div>
               <p className="text-foreground/70">
@@ -413,37 +501,129 @@ export default function Home() {
             <div>
               <h3 className="font-bold mb-4">Platform</h3>
               <ul className="space-y-2 text-foreground/70">
-                <li><Link href="/presale" className="hover:text-primary transition-colors">Presale</Link></li>
-                <li><Link href="/about" className="hover:text-primary transition-colors">About</Link></li>
-                <li><a href="#features" className="hover:text-primary transition-colors">Features</a></li>
-                <li><a href="#tokenomics" className="hover:text-primary transition-colors">Tokenomics</a></li>
+                <li>
+                  <Link
+                    href="/presale"
+                    className="hover:text-primary transition-colors"
+                  >
+                    Presale
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/about"
+                    className="hover:text-primary transition-colors"
+                  >
+                    About
+                  </Link>
+                </li>
+                <li>
+                  <a
+                    href="#features"
+                    className="hover:text-primary transition-colors"
+                  >
+                    Features
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#tokenomics"
+                    className="hover:text-primary transition-colors"
+                  >
+                    Tokenomics
+                  </a>
+                </li>
               </ul>
             </div>
             <div>
               <h3 className="font-bold mb-4">Resources</h3>
               <ul className="space-y-2 text-foreground/70">
-                <li><Link href="/docs" className="hover:text-primary transition-colors">Documentation</Link></li>
-                <li><Link href="/docs" className="hover:text-primary transition-colors">Whitepaper</Link></li>
-                <li><Link href="/docs" className="hover:text-primary transition-colors">Security</Link></li>
-                <li><a href="#roadmap" className="hover:text-primary transition-colors">Roadmap</a></li>
+                <li>
+                  <Link
+                    href="/docs"
+                    className="hover:text-primary transition-colors"
+                  >
+                    Documentation
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/docs"
+                    className="hover:text-primary transition-colors"
+                  >
+                    Whitepaper
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/docs"
+                    className="hover:text-primary transition-colors"
+                  >
+                    Security
+                  </Link>
+                </li>
+                <li>
+                  <a
+                    href="#roadmap"
+                    className="hover:text-primary transition-colors"
+                  >
+                    Roadmap
+                  </a>
+                </li>
               </ul>
             </div>
             <div>
               <h3 className="font-bold mb-4">Community</h3>
               <ul className="space-y-2 text-foreground/70">
-                <li><a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Twitter</a></li>
-                <li><a href="https://discord.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Discord</a></li>
-                <li><a href="https://telegram.org" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Telegram</a></li>
-                <li><Link href="/contact" className="hover:text-primary transition-colors">Contact</Link></li>
+                <li>
+                  <a
+                    href="https://twitter.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-primary transition-colors"
+                  >
+                    Twitter
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://discord.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-primary transition-colors"
+                  >
+                    Discord
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://telegram.org"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-primary transition-colors"
+                  >
+                    Telegram
+                  </a>
+                </li>
+                <li>
+                  <Link
+                    href="/contact"
+                    className="hover:text-primary transition-colors"
+                  >
+                    Contact
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>
           <div className="mt-12 pt-8 border-t border-border text-center text-foreground/70">
-            <p>&copy; 2025 Pulse. All rights reserved. Built on blockchain technology.</p>
+            <p>
+              &copy; 2025 Pulse. All rights reserved. Built on blockchain
+              technology.
+            </p>
           </div>
         </div>
       </footer>
     </div>
   );
 }
-
