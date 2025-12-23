@@ -1,0 +1,12 @@
+# CNAME Configuration for Custom Domain
+# 
+# To use a custom domain with GitHub Pages:
+# 1. Rename this file to 'CNAME' (without .example extension)
+# 2. Replace 'yourdomain.com' below with your actual domain
+# 3. Configure DNS records at your domain provider
+# 
+# Example:
+# pulse.example.com
+# 
+# Uncomment and replace with your domain:
+# yourdomain.com
